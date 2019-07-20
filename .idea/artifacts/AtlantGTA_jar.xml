@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AtlantGTA:jar">
+    <output-path>$USER_HOME$/Desktop/Develop/Other/Server/plugins</output-path>
+    <root id="archive" name="AtlantGTA.jar">
+      <element id="module-output" name="AtlantGTA" />
+    </root>
+  </artifact>
+</component>

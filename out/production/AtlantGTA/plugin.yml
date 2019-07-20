@@ -1,0 +1,56 @@
+main: ru.func.atlantgta.AtlantGTA
+name: AtlantGTA
+version: 1.0
+author: func
+website: http://funcid.ru
+description: '§cХочу стать девочкой-волшебницей.'
+depend: [Vault, Essentials]
+commands:
+  f:
+    usage: '/f <invite/kick/setpost/accept> аргумент'
+  fc:
+    usage: '/fc сообщение'
+  base:
+    usage: '/base /*телепортирует на базу вашей фракции*/'
+  rob:
+    usage: '/rob <name>'
+  pass:
+    usage: '/pass <name>'
+  resetstars:
+    usage: '/resetstars <name>'
+  level:
+    usage: '/level'
+  levelup:
+    usage: '/levelup <name>'
+  givestars:
+    usage: '/givestars <name> <value>'
+  arrest:
+    usage: '/arrest <name>'
+  unarrest:
+    usage: '/unarrest <name>'
+  prison:
+    usage: '/prison <jail/freedom>'
+  leave:
+    usage: '/leave'
+  getequip:
+    usage: '/getequip'
+  robequip:
+    usage: '/robequip'
+  makegun:
+    usage: '/makegun <name>'
+  trade:
+    usage: '/trade <name> <value>'
+  shtraf:
+    usage: '/shtraf <name> <value>'
+  hp:
+    usage: '/hp <name> <value>'
+  hidescore:
+    usage: '/hidescore'
+  givemedcard:
+    usage: '/givemedcard <name>'
+  givearmyticket:
+    usage: '/givearmyticket <name>'
+  reportbug:
+    usage: '/reportbug'
+  salary:
+    isage: '/salary'
