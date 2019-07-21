@@ -53,4 +53,8 @@ commands:
   reportbug:
     usage: '/reportbug'
   salary:
-    isage: '/salary'
+    usage: '/salary'
+  contract:
+    usage: '/contract <name> <value>'
+  helpme:
+    usage: '/helpme <question>'

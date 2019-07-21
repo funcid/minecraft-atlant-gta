@@ -23,9 +23,10 @@ public class GiveMedicineCardCommand implements CommandExecutor {
         if (!PLUGIN.getOnlinePlayers().containsKey(commandSender)) return false;
 
         AtlantPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(commandSender);
-        if (atlantPlayer.getPost().getRoots().contains("givecardCommand"))
+        if (atlantPlayer.getPost().getRoots().contains("givemedcardCommand"))
             if (PLUGIN.getOnlinePlayers().containsKey(Bukkit.getPlayer(strings[0])))
                 PLUGIN.getOnlinePlayers().get(Bukkit.getPlayer(strings[0])).setCard(true);
+
         return true;
     }
 }

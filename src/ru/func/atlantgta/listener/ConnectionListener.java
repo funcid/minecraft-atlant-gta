@@ -86,13 +86,12 @@ public class ConnectionListener implements Listener {
                         "'" + standardStatsConfigurationSection.getString("level") + "'," +
                         "'" + standardStatsConfigurationSection.getString("age") + "', " +
                         "'" + standardStatsConfigurationSection.getString("ammo") + "', " +
-                        "'NONE:NONE'" +
-                        "'false', " +
-                        "'false');");
+                        "'NONE:NONE'" + ", 0, 0);");
                 p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("newAccount"));
                 return loadStats(p);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             p.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("LoadProfileException"));
         }
         return null;
@@ -109,12 +108,12 @@ public class ConnectionListener implements Listener {
                             "age = '" + atlantPlayer.getAge() + "', " +
                             "ammo = '" + atlantPlayer.getAmmunition() + "', " +
                             "fraction = '" + atlantPlayer.getFraction().getName() + ":" + atlantPlayer.getPost().getName() + "', " +
-                            "ticket = '" + atlantPlayer.hasTicket() + "', " +
-                            "card = '" + atlantPlayer.hasCard() + "' " +
+                            "ticket = '" + (atlantPlayer.hasTicket() ? 1 : 0) + "', " +
+                            "card = '" + (atlantPlayer.hasCard() ? 1 : 0) + "' " +
                             "WHERE uuid = '" + p.getUniqueId() + "';");
-
                 Bukkit.getLogger().info(p.getName() + " сохранен.");
-            } catch (SQLException ex) {
+            } catch (SQLException e) {
+                e.printStackTrace();
                 if (i < 3) saveStats(p, ++i);
             }
             PLUGIN.getOnlinePlayers().remove(p);
@@ -122,6 +121,15 @@ public class ConnectionListener implements Listener {
     }
 
     private void enableScoreboard(Player player) {
+        /* С самного начала этот код понимали я и Бог,
+        прошло 10 дней, отсался только Бог
+        (лан шучу, это просто)
+        С кем я вообще болтаю? Ахаха
+        - Со мной
+        - Но.. Кто ты?
+        - Ты это я, только я не пишу говнокода
+        - Потому что ты пишешь комментарии, а не код, дибил
+        */
         PlayerConnection playerConnection = ((CraftPlayer) player).getHandle().playerConnection;
 
         Scoreboard scoreboard = new Scoreboard();

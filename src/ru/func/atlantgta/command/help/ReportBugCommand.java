@@ -1,4 +1,4 @@
-package ru.func.atlantgta.command;
+package ru.func.atlantgta.command.help;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

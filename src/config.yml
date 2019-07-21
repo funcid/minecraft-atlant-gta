@@ -27,6 +27,10 @@ scoreboard:
   address: '§lНаш IP §b>> §bplay.atlantworld.ru'
   city: '§lГород §7>> §c§lМосква'
 settings:
+  helpMeCommand:
+    price: 1000
+  contractCommand:
+    minimalReward: 1000
   salary:
     time: 60
   scoreboard:
@@ -72,6 +76,11 @@ message:
     ERROR: '[!] '
     FATAL_ERROR: '[!*] '
   messages:
+    helpMe: '%NAME% разослал вопрос: %QUESTION%'
+    answered: 'Вы первым ответили на вопрос, вы получите %MONEY% за ответ.'
+    answer: '%NAME% прислал вам ответ: %ANSWER%'
+    contract: 'Последовало заказное убийство на игрока %NAME%, вознаграждение %MONEY%.'
+    completeContract: 'Вы успешно выполнили заказ на убийство %NAME%, вы получите %MONEY%.'
     getSalary: 'Вы получили свою зарплату в размере %MONEY%.'
     globalSearch: '%NAME% был объявлен в федеральный розыск! Звезд: %STARS%'
     boughtWeapon: 'Вы успешно создали %WEAPON% за %MONEY% боеприпасов.'
@@ -129,9 +138,10 @@ message:
     LowLevelException: 'Игрок не может вступить во фракции, так его лвл слишком мал.'
     HaventTimeException: 'Что бы повысить уровень вам нужно поиграть еще %TIME% минут.'
     IllegalNumberException: 'Указанное число не соответствует системным ограничениям.'
-    IllegalMoneyException: 'Из-за такой пидаросни как ты, мне приходится делать тысячи проверок, сдохни'
+    IllegalMoneyException: 'Ты кого наебать пытаешься? Я хитровыебанный.'
     NoMedicineCardFound: 'У вас нету медицинской карты, вы не можете попасть в армию.'
     NoArmyTicketFound: 'Вы не можете вступить в полицию так как у вас нету военного билета.'
+    MoreMoneyException: 'Вы не можете назначитт такую маленькую сумму.'
 #Настройка фракций
 fractions:
   NONE:
@@ -158,5 +168,5 @@ fractions:
       OWNER:
         salary: 5000
         name: 'Глава полицейских'
-        roots: 'robCommand, arrestCommand, givestarsCommand, unarrestCommand, getequipCommand, robequipCommand, policeStick, shtrafCommand, healthCommand, doubleHealth'
+        roots: 'robCommand, arrestCommand, givestarsCommand, unarrestCommand, getequipCommand, robequipCommand, policeStick, shtrafCommand, healthCommand, doubleHealth, contractCommand, completeContract, helpmeCommand, givemedcardCommand, givearmyticketCommand'
 

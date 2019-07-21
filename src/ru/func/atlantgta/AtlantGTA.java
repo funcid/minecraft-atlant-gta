@@ -14,6 +14,8 @@ import ru.func.atlantgta.command.*;
 import ru.func.atlantgta.command.fraction.FractionChatCommand;
 import ru.func.atlantgta.command.fraction.FractionCommand;
 import ru.func.atlantgta.command.fraction.FractionTeleportCommand;
+import ru.func.atlantgta.command.help.HelpMeCommand;
+import ru.func.atlantgta.command.help.ReportBugCommand;
 import ru.func.atlantgta.command.prison.ArrestCommand;
 import ru.func.atlantgta.command.prison.LeaveCommand;
 import ru.func.atlantgta.command.prison.PrisonCommand;
@@ -27,6 +29,7 @@ import ru.func.atlantgta.fraction.PostUtil;
 import ru.func.atlantgta.listener.ConnectionListener;
 import ru.func.atlantgta.listener.MenuHandler;
 import ru.func.atlantgta.listener.PlayerDamageListener;
+import ru.func.atlantgta.listener.PlayerDeathListener;
 import ru.func.atlantgta.util.MessageUtil;
 
 import java.sql.SQLException;
@@ -44,7 +47,7 @@ public class AtlantGTA extends JavaPlugin {
 
     /* SQL переменные */
     private Statement STATEMENT;
-    private final ConfigurationSection sqLSettingsConfigurationSection = this.getConfig().getConfigurationSection("sqlSettings");
+    private final ConfigurationSection sqLSettingsConfigurationSection = getConfig().getConfigurationSection("sqlSettings");
     private final MySQL BASE = new MySQL(
             sqLSettingsConfigurationSection.getString("user"),
             sqLSettingsConfigurationSection.getString("password"),
@@ -53,8 +56,12 @@ public class AtlantGTA extends JavaPlugin {
             sqLSettingsConfigurationSection.getInt("port")
     );
     /* Fraction переменные */
-    private final ConfigurationSection fractionsConfigurationSection = this.getConfig().getConfigurationSection("fractions");
+    private final ConfigurationSection fractionsConfigurationSection = getConfig().getConfigurationSection("fractions");
 
+    /* Я писал этот код под таким мощным анабиозом что обмен веществ в моем мозге
+    настолько замедлился что впал в кому и на самых низких мощностях продолжил
+    функцию написания этого кода
+     */
     @Override
     public void onEnable() {
         registerConfig();
@@ -101,6 +108,7 @@ public class AtlantGTA extends JavaPlugin {
 
         Bukkit.getPluginManager().registerEvents(connectionListener, this);
         Bukkit.getPluginManager().registerEvents(new PlayerDamageListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(this), this);
         Bukkit.getPluginManager().registerEvents(new MenuHandler(), this);
 
         for (Player p : Bukkit.getOnlinePlayers())
@@ -129,6 +137,8 @@ public class AtlantGTA extends JavaPlugin {
         Bukkit.getPluginCommand("givemedcard").setExecutor(new GiveMedicineCardCommand(this));
         Bukkit.getPluginCommand("givearmyticket").setExecutor(new GiveArmyTicketCommand(this));
         Bukkit.getPluginCommand("salary").setExecutor(new SalaryCommand(this));
+        Bukkit.getPluginCommand("contract").setExecutor(new ContractCommand(this));
+        Bukkit.getPluginCommand("helpme").setExecutor(new HelpMeCommand(this));
         Bukkit.getPluginCommand("hidescore").setExecutor(new HideScoreboardCommand());
         Bukkit.getPluginCommand("reportbug").setExecutor(new ReportBugCommand());
     }

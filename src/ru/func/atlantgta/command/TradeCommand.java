@@ -62,6 +62,10 @@ public class TradeCommand implements CommandExecutor {
                         ItemStack itemStack = ((Player) commandSender).getInventory().getItemInMainHand();
                         if (itemStack != null) {
                             if (!itemStack.getType().equals(Material.AIR)) {
+                                if (strings[1].contains("-")) {
+                                    commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("IllegalMoneyException"));
+                                    return true;
+                                }
                                 invites.put(uuid, player.getUniqueId());
                                 container.put(uuid, ((Player) commandSender).getInventory().getItemInMainHand());
                                 value.put(player.getUniqueId(), Integer.parseInt(strings[1]));
