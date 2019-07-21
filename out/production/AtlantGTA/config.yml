@@ -154,10 +154,10 @@ fractions:
         roots: 'none'
   POLICE:
     name: 'Полиция'
-    minLevel: 5
+    minLevel: 1
     base: '255 255 255'
     ranks:
-      policeman:
+      FPOLICE:
         salary: 5000
         name: 'Полицейский'
         roots: ', arrest'

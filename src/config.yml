@@ -145,19 +145,19 @@ message:
 #Настройка фракций
 fractions:
   NONE:
-    name: 'none'
+    name: 'Отсутствует'
     minLevel: 1
     base: '0 0 0'
     ranks:
       NONE:
-        name: 'none'
+        name: 'Отсутствует'
         roots: 'none'
   POLICE:
     name: 'Полиция'
     minLevel: 5
     base: '255 255 255'
     ranks:
-      policeman:
+      FPOLICE:
         salary: 5000
         name: 'Полицейский'
         roots: ', arrest'

@@ -86,7 +86,7 @@ public class FractionCommand implements CommandExecutor {
                                     return true;
                                 }
                                 atlantPlayer.setFraction(atlantSender.getFraction());
-                                atlantPlayer.setPost(PostUtil.getNonePost());
+                                atlantPlayer.setPost(PostUtil.getPostByName("F" + atlantPlayer.getFraction().getName()));
                                 commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("joinFraction"));
                             } else {
                                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));

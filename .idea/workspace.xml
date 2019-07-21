@@ -12,11 +12,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AtlantGTA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+            <state relative-caret-position="591">
+              <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -24,56 +33,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContractCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/ContractCommand.java">
+      <file leaf-file-name="Fraction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="243">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FractionUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPost.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FractionCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="88" column="82" selection-start-line="88" selection-start-column="82" selection-end-line="88" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="981">
-              <caret line="170" column="236" selection-start-line="170" selection-start-column="236" selection-end-line="170" selection-end-column="236" />
+            <state relative-caret-position="229">
+              <caret line="147" column="22" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelpMeCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/help/HelpMeCommand.java">
+      <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="944">
+              <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContractUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/listener/ContractUtil.java">
+      <file leaf-file-name="IFraction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GiveArmyTicketCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveArmyTicketCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="754">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -83,33 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FractionUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/listener/ConnectionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="111" column="73" selection-start-line="111" selection-start-column="73" selection-end-line="111" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GiveMedicineCardCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveMedicineCardCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="26" column="84" lean-forward="true" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -138,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/ru/func/atlantGta/command/RobCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantGta/AtlantGTA.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantGta/command/prison/ArrestCommand.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/LeaveCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/AnarrestCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/UnarrestCommand.java" />
@@ -154,30 +144,31 @@
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/HideScoreboardCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantPlayer.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveArmyTicketCommand.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/ReportBugCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/HealthCommand.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/PostUtil.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/SalaryCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/GetEquipmentCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/RobEquipmentCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/PasswordCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/IPlayer.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/listener/ContractUtil.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/ContractCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/listener/PlayerDeathListener.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/TradeCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/help/HelpUtil.java" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/listener/ConnectionListener.java" />
-        <option value="$PROJECT_DIR$/src/config.yml" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveMedicineCardCommand.java" />
         <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/help/HelpMeCommand.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java" />
+        <option value="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java" />
+        <option value="$PROJECT_DIR$/src/config.yml" />
       </list>
     </option>
   </component>
@@ -369,11 +360,11 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49920508" weight="0.32942098" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.43521464" visible="true" weight="0.0070422534" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.43163753" weight="0.0070422534" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.56478536" side_tool="true" visible="true" weight="0.0070422534" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5683625" side_tool="true" visible="true" weight="0.0070422534" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
@@ -431,20 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/listener/MenuHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -470,20 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -601,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionChatCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -678,23 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1117">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/listener/ContractUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -702,20 +641,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/PostUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -730,13 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="170" column="236" selection-start-line="170" selection-start-column="236" selection-end-line="170" selection-end-column="236" />
         </state>
       </provider>
     </entry>
@@ -759,11 +677,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/help/HelpMeCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+        <state relative-caret-position="1025">
+          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/PostUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="88" column="82" selection-start-line="88" selection-start-column="82" selection-end-line="88" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="147" column="22" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
         </state>
       </provider>
     </entry>
