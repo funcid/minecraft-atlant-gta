@@ -6,7 +6,12 @@ import java.util.List;
 public class PostUtil {
 
     private static List<Post> posts = new ArrayList<>();
-    private static Post NONE = new Post(FractionUtil.getNoneFraction(), "NONE", "Отсутствует", "none", 0);
+    private static Post NONE = new PostBuilder()
+            .parrent(FractionUtil.getNoneFraction())
+            .name("NONE")
+            .subName("Отсутствует")
+            .roots("none").salary(0)
+            .build();
 
     public static Post getPostByName(String name) {
         for (Post post : posts)

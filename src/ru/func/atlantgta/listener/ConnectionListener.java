@@ -91,7 +91,6 @@ public class ConnectionListener implements Listener {
                 return loadStats(p);
             }
         } catch (Exception e) {
-            e.printStackTrace();
             p.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("LoadProfileException"));
         }
         return null;
@@ -113,7 +112,6 @@ public class ConnectionListener implements Listener {
                             "WHERE uuid = '" + p.getUniqueId() + "';");
                 Bukkit.getLogger().info(p.getName() + " сохранен.");
             } catch (SQLException e) {
-                e.printStackTrace();
                 if (i < 3) saveStats(p, ++i);
             }
             PLUGIN.getOnlinePlayers().remove(p);
@@ -174,18 +172,18 @@ public class ConnectionListener implements Listener {
                     playerConnection.sendPacket(createObj);
                     playerConnection.sendPacket(display);
 
-                    String stars = "§6§l";
+                    StringBuilder stars = new StringBuilder("§6§l");
                     for (int i = 0; i < atlantPlayer.getStars(); i++)
-                        stars += "✮";
-                    String none = "§7§l";
+                        stars.append("✮");
+                    StringBuilder none = new StringBuilder("§7§l");
                     for (int i = 0; i < 5 - atlantPlayer.getStars(); i++)
-                        none += "✮";
+                        none.append("✮");
 
                     ScoreboardScore fractionScore = new ScoreboardScore(scoreboard, objective, "§lФракция: §7>> §6" + atlantPlayer.getFraction().getSubName());
                     fractionScore.setScore(11);
                     ScoreboardScore postScore = new ScoreboardScore(scoreboard, objective, "§lДолжность: §7>> §6" + atlantPlayer.getPost().getSubName());
                     postScore.setScore(10);
-                    ScoreboardScore starsScore = new ScoreboardScore(scoreboard, objective, "§a§lПреступность: §7>> " + stars + none);
+                    ScoreboardScore starsScore = new ScoreboardScore(scoreboard, objective, "§a§lПреступность: §7>> " + stars.append(none).toString());
                     starsScore.setScore(7);
                     ScoreboardScore onlineScore = new ScoreboardScore(scoreboard, objective, "§lИгроков: §7>> §6" + Bukkit.getOnlinePlayers().size());
                     onlineScore.setScore(6);

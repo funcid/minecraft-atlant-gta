@@ -6,7 +6,12 @@ import java.util.List;
 public class FractionUtil {
 
     private static List<Fraction> fractions = new ArrayList<>();
-    private static Fraction NONE = new Fraction(1, "NONE", "Отсутствует", null);
+    private static Fraction NONE = new FractionBuilder()
+            .name("NONE")
+            .subName("Отсутствует")
+            .minLevel(1)
+            .baseLocation(null)
+            .build();
 
     public static Fraction getFractionByName(String name) {
         for (Fraction fraction : fractions)

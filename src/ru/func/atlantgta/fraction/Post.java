@@ -1,6 +1,6 @@
 package ru.func.atlantgta.fraction;
 
-public class Post implements IPost {
+public class Post extends PostBuilder implements IPost {
 
     private Fraction parrent;
     private String name;
@@ -8,12 +8,12 @@ public class Post implements IPost {
     private String roots;
     private int salary;
 
-    public Post(Fraction parrent, String name, String subName, String roots, int salary) {
-        this.parrent = parrent;
-        this.name = name;
-        this.subName = subName;
-        this.roots = roots;
-        this.salary = salary;
+    Post(final PostBuilder postBuilder) {
+        this.parrent = postBuilder.getParrent();
+        this.name = postBuilder.getName();
+        this.subName = postBuilder.getSubName();
+        this.roots = postBuilder.getRoots();
+        this.salary = postBuilder.getSalary();
     }
 
     @Override

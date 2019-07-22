@@ -22,10 +22,7 @@ import ru.func.atlantgta.command.prison.PrisonCommand;
 import ru.func.atlantgta.command.prison.UnarrestCommand;
 import ru.func.atlantgta.command.TradeCommand;
 import ru.func.atlantgta.database.MySQL;
-import ru.func.atlantgta.fraction.Fraction;
-import ru.func.atlantgta.fraction.FractionUtil;
-import ru.func.atlantgta.fraction.Post;
-import ru.func.atlantgta.fraction.PostUtil;
+import ru.func.atlantgta.fraction.*;
 import ru.func.atlantgta.listener.ConnectionListener;
 import ru.func.atlantgta.listener.MenuHandler;
 import ru.func.atlantgta.listener.PlayerDamageListener;
@@ -86,22 +83,22 @@ public class AtlantGTA extends JavaPlugin {
                     Double.parseDouble(coords[1]),
                     Double.parseDouble(coords[2])
             );
-            Fraction currentFraction = new Fraction(
-                    arg.getInt("minLevel"),
-                    arg.getName(),
-                    arg.getString("name"),
-                    location
-            );
+            Fraction currentFraction = new FractionBuilder()
+                    .minLevel(arg.getInt("minLevel"))
+                    .name(arg.getName())
+                    .subName(arg.getString("name"))
+                    .baseLocation(location)
+                    .build();
             FractionUtil.getFractions().add(currentFraction);
             for (String postName : arg.getConfigurationSection("ranks").getKeys(false)) {
                 ConfigurationSection post = arg.getConfigurationSection("ranks").getConfigurationSection(postName);
-                PostUtil.getPosts().add(new Post(
-                                currentFraction,
-                                post.getName(),
-                                post.getString("name"),
-                                post.getString("roots"),
-                                post.getInt("salary")
-                        )
+                PostUtil.getPosts().add(new PostBuilder()
+                        .parrent(currentFraction)
+                        .name(post.getName())
+                        .subName(post.getString("name"))
+                        .roots(post.getString("roots"))
+                        .salary(post.getInt("salary"))
+                        .build()
                 );
             }
         }

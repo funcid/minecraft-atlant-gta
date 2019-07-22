@@ -2,18 +2,18 @@ package ru.func.atlantgta.fraction;
 
 import org.bukkit.Location;
 
-public class Fraction implements IFraction {
+public class Fraction extends FractionBuilder implements IFraction {
 
     private int minLevel;
     private String name;
     private String subName;
     private Location baseLocation;
 
-    public Fraction(int minLevel, String name, String subName, Location baseLocation) {
-        this.minLevel = minLevel;
-        this.name = name;
-        this.subName = subName;
-        this.baseLocation = baseLocation;
+    Fraction(final FractionBuilder fractionBuilder) {
+        this.minLevel = fractionBuilder.getMinLevel();
+        this.name = fractionBuilder.getName();
+        this.subName = fractionBuilder.getSubName();
+        this.baseLocation = fractionBuilder.getBaseLocation();
     }
 
     @Override
