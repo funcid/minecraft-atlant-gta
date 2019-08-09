@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import ru.func.atlantgta.AtlantGTA;
 import ru.func.atlantgta.AtlantPlayer;
+import ru.func.atlantgta.fraction.Fraction;
 import ru.func.atlantgta.fraction.FractionUtil;
 import ru.func.atlantgta.fraction.PostUtil;
 import ru.func.atlantgta.util.MessageUtil;
@@ -116,18 +117,19 @@ public class FractionCommand implements CommandExecutor {
                         Bukkit.getPlayer(strings[1]).sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("wasKicked"));
                         break;
                     case "join":
-                        if (FractionUtil.getFractionByName(strings[1]) != null) {
+                        Fraction fraction = FractionUtil.getFractionByName(strings[1]);
+                        if (fraction != null) {
                             if (atlantPlayer.getFraction().getName().equalsIgnoreCase("NONE")) {
-                                if (atlantPlayer.getFraction().getName().equals("ARMY") && !atlantPlayer.hasCard()) {
+                                if (strings[1].equals("ARMY") && !atlantPlayer.hasCard()) {
                                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoMedicineCardFound"));
                                     return true;
                                 }
-                                if (atlantPlayer.getFraction().getName().equals("POLICE") && !atlantPlayer.hasTicket()) {
+                                if (strings[1].equals("POLICE") && !atlantPlayer.hasTicket()) {
                                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoArmyTicketFound"));
                                     return true;
                                 }
-                                atlantPlayer.setFraction(FractionUtil.getFractionByName(strings[1]));
-                                atlantPlayer.setPost(PostUtil.getPostByName("F" + atlantPlayer.getFraction().getName()));
+                                atlantPlayer.setFraction(fraction);
+                                atlantPlayer.setPost(PostUtil.getPostByName("F" + fraction.getName()));
                                 commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("joinFraction"));
                             } else {
                                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));
