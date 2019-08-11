@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2579bc98-0990-4652-a304-63456ac88275" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/ConnectionListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/ConnectionListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantGTA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantGTA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionCommand.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

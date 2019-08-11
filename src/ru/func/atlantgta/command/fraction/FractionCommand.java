@@ -47,7 +47,8 @@ public class FractionCommand implements CommandExecutor {
             case 2:
                 switch (strings[0]) {
                     case "invite":
-                        if (!atlantPlayer.getPost().getName().equalsIgnoreCase("OWNER")) {
+
+                        if (!atlantPlayer.getPost().getRoots().contains("fractionInviteCommand")) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoRootsException"));
                             return true;
                         }
@@ -99,7 +100,7 @@ public class FractionCommand implements CommandExecutor {
                         }
                         break;
                     case "kick":
-                        if (!atlantPlayer.getPost().getName().equalsIgnoreCase("OWNER")) {
+                        if (!atlantPlayer.getPost().getRoots().contains("fractionKickCommand")) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoRootsException"));
                             return true;
                         }
@@ -142,7 +143,7 @@ public class FractionCommand implements CommandExecutor {
             case 3:
                 switch (strings[0]) {
                     case "setpost":
-                        if (!atlantPlayer.getPost().getName().equalsIgnoreCase("OWNER")) {
+                        if (!atlantPlayer.getPost().getRoots().contains("fractionSetpostCommand")) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoRootsException"));
                             return true;
                         }
