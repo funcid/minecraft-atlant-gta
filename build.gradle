@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.ilyafx'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
+}
+
+jar {
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+    compileOnly files("libs/CrackShot.jar")
+    compileOnly files("libs/spigot.jar")
+    compileOnly files("libs/Vault.jar")
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '3.3.1'
+}

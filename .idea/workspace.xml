@@ -1,10 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2579bc98-0990-4652-a304-63456ac88275" name="Default" comment="">
+    <list default="true" id="b6583296-ffa3-4df9-a28c-9967ceb5a4b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/atlantgta_main_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AtlantGTA_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantGTA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantGTA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AtlantGTA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantGTA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/AtlantPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/IPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/ContractCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/GetEquipmentCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/GiveArmyTicketCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/GiveMedicineCardCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/GiveStarsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/HealthCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/HideScoreboardCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/LevelCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/LevelupCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/MakeGunCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/PasswordCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/ResetstarsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/RobCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/RobEquipmentCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/SalaryCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/ShtrafCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/TradeCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionChatCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/fraction/FractionTeleportCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/help/HelpMeCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/help/ReportBugCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/prison/ArrestCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/prison/LeaveCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/prison/PrisonCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/prison/PrisonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/command/prison/UnarrestCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/database/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/database/MySQL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/Fraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/FractionBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/FractionUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/IFraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/IPost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/Post.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/PostBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/fraction/PostUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/ConnectionListener$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/ConnectionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/ContractUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/MenuHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/PlayerDamageListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/listener/PlayerDeathListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtlantGTA/ru/func/atlantgta/util/MessageUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantGTA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/AtlantPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/IPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/ContractCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/GetEquipmentCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveArmyTicketCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveMedicineCardCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/GiveStarsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/HealthCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/HideScoreboardCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/LevelCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/LevelupCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/MakeGunCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/PasswordCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/ResetstarsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/RobCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/RobEquipmentCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/SalaryCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/ShtrafCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/TradeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionChatCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/fraction/FractionTeleportCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/help/HelpMeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/help/ReportBugCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/ArrestCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/LeaveCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/PrisonCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/PrisonUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/command/prison/UnarrestCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/database/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/database/MySQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Fraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/FractionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IFraction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/IPost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/PostBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/fraction/PostUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/listener/ConnectionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/listener/ContractUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/listener/MenuHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/listener/PlayerDamageListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/listener/PlayerDeathListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/func/atlantgta/util/MessageUtil.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,29 +115,82 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="atlantgta" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="atlantgta" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="atlantgta" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>onDisable</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Oai6rDBSm4HRZfB4RaByDspp4d" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="hWwhzuiL" />
+  </component>
+  <component name="ProjectId" id="1V1c8cO0eZfYXXd9jixEddt3boK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/Develop/Other/Server/plugins/CrackShot.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15429688" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576362977384" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,11 +205,36 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="AtlantGTA [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -71,34 +252,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AtlantGTA [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2579bc98-0990-4652-a304-63456ac88275" name="Default" comment="" />
-      <created>1562932494990</created>
+      <changelist id="b6583296-ffa3-4df9-a28c-9967ceb5a4b1" name="Default Changelist" comment="" />
+      <created>1576356300522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1562932494990</updated>
+      <updated>1576356300522</updated>
+      <workItem from="1576356304442" duration="6629000" />
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6629000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
