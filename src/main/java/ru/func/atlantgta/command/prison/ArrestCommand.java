@@ -43,8 +43,9 @@ public class ArrestCommand implements CommandExecutor {
             Player player = Bukkit.getPlayer(strings[0]);
             if (PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
                 IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(player.getUniqueId());
-                if (!atlantPlayer.getPost().getName().equals("NONE")) {
-                    if (atlantPlayer.getPost().getRoots().contains("arrestCommand")) {
+                IPlayer user = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
+                if (!user.getPost().getName().equals("NONE")) {
+                    if (user.getPost().getRoots().contains("arrestCommand")) {
                         if (atlantPlayer.getStars() > 0) {
                             if (((Player) commandSender).getNearbyEntities(distance, distance, distance).contains(player)) {
                                 PrisonUtil.getPrisoners().put(player.getUniqueId(),
