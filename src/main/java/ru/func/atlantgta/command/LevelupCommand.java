@@ -27,6 +27,7 @@ public class LevelupCommand implements CommandExecutor {
             if (PLUGIN.getOnlinePlayers().containsKey(Bukkit.getPlayer(strings[0]).getUniqueId())) {
                 IPlayer player = PLUGIN.getOnlinePlayers().get(Bukkit.getPlayer(strings[0]).getUniqueId());
                 player.setLevel(player.getLevel() + 1);
+                player.setAge(player.getAge() + 1);
                 Bukkit.getPlayer(strings[0]).sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("levelUp"));
                 commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("levelUp"));
             }
