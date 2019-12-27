@@ -34,6 +34,7 @@ public class LevelCommand implements CommandExecutor {
 
         if (levelTime < timePlayed) {
             atlantPlayer.setLevel(atlantPlayer.getLevel() + 1);
+            atlantPlayer.setAge(atlantPlayer.getAge() + 1);
             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("levelUp"));
             return true;
         }
