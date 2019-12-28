@@ -40,7 +40,8 @@ public class PassCommand implements CommandExecutor {
         if (strings.length == 0) {
             showPassword((Player) commandSender, (Player) commandSender);
         } else if (strings.length == 1) {
-            if (!PLUGIN.getOnlinePlayers().containsKey(Bukkit.getPlayer(strings[0]).getUniqueId())) {
+            Player player = Bukkit.getPlayer(strings[0]);
+            if (player == null || !PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UnrealPlayerException"));
                 return true;
             }
