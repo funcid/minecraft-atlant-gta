@@ -148,6 +148,7 @@ message:
     MoreMoneyException: 'Вы не можете назначить такую маленькую сумму.'
     RobException: 'Что бы обворовать человека вы должны состоять во фракции бандитов.'
     MayBePolicemanException: 'Вы должны быть полицейским что бы использовать данную команду.'
+    PostNotFoundException: 'Кто-то с тобой накосячил. Вероятно, название поста не корректно.'
 #Настройка фракций
 fractions:
   NONE:
@@ -171,7 +172,7 @@ fractions:
         salary: 5000
         name: 'Генерал'
         roots: 'policestick, arrest, unarest, globalmessage'
-      OWNER:
+      OWNER_POLICE:
         salary: 5000
         name: 'Глава полицейских'
         roots: 'robCommand, arrestCommand, givestarsCommand, unarrestCommand, getequipCommand, robequipCommand, policeStick, shtrafCommand, healthCommand, doubleHealth, contractCommand, completeContract, helpmeCommand, givemedcardCommand, givearmyticketCommand'

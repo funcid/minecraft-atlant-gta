@@ -5,7 +5,7 @@ public interface IPost {
     /**
      * @return parent fraction
      */
-    Fraction getParrent();
+    Fraction getParent();
 
     /**
      * @return name of this post

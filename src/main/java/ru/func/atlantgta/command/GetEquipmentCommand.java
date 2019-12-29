@@ -34,6 +34,11 @@ public class GetEquipmentCommand implements CommandExecutor {
         if (!(commandSender instanceof Player)) return false;
         if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return false;
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
+        if (atlantPlayer.getPost() == null) {
+            commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("PostNotFoundException"));
+            commandSender.sendMessage("Кто-то с тобой накосячил. Вероятно, название поста не корректно.");
+            return false;
+        }
         if (atlantPlayer.getPost().getRoots().contains("getequipCommand")) {
             atlantPlayer.setAmmunition(atlantPlayer.getAmmunition() + PRICE);
             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("getEquip")

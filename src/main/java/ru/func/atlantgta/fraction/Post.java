@@ -9,7 +9,7 @@ public class Post extends PostBuilder implements IPost {
     private int salary;
 
     Post(final PostBuilder postBuilder) {
-        this.parrent = postBuilder.getParrent();
+        this.parrent = postBuilder.getParent();
         this.name = postBuilder.getName();
         this.subName = postBuilder.getSubName();
         this.roots = postBuilder.getRoots();
@@ -17,18 +17,18 @@ public class Post extends PostBuilder implements IPost {
     }
 
     @Override
-    public Fraction getParrent() {
+    public Fraction getParent() {
         return parrent;
     }
 
     @Override
     public String getName() {
-        return name;
+        return name.isEmpty() ? "Ошибка загрузки." : name;
     }
 
     @Override
     public String getSubName() {
-        return subName;
+        return subName.isEmpty() ? "Ошибка загрузки." : subName;
     }
 
     @Override

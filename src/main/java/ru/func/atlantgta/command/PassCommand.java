@@ -82,8 +82,8 @@ public class PassCommand implements CommandExecutor {
                 "",
                 "§eБоеприпасов: " + atlantPlayer.getAmmunition(),
                 "",
-                "§fФракция: §b§l" + atlantPlayer.getFraction().getSubName(),
-                "§fДолжность: §b§l" + atlantPlayer.getPost().getSubName()
+                "§fФракция: §b§l" + (atlantPlayer.getFraction() == null ? "Ошибка 404" : atlantPlayer.getFraction().getSubName()),
+                "§fДолжность: §b§l" + (atlantPlayer.getPost() == null ? "Ошибка 404" : atlantPlayer.getPost().getSubName())
 
         ));
         paper.setItemMeta(itemMeta);

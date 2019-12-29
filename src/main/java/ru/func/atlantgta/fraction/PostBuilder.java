@@ -37,7 +37,7 @@ public class PostBuilder {
         return new Post(this);
     }
 
-    protected Fraction getParrent() {
+    protected Fraction getParent() {
         return parrent;
     }
 

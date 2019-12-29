@@ -70,6 +70,7 @@ public class AtlantGTA extends JavaPlugin {
         BASE.executeUpdate("CREATE TABLE IF NOT EXISTS `AtlantPlayers` (uuid varchar(50), name varchar(50), level INT, age INT, ammo INT, fraction varchar(150), ticket INT, card INT, PRIMARY KEY(uuid));");
         getLogger().info("[!] Connected to DataBase.");
         // Создание фракций
+        logger.info("[Загрузка фракций и постов начата]");
         for (String fraction : fractionsConfigurationSection.getKeys(false)) {
             ConfigurationSection arg = fractionsConfigurationSection.getConfigurationSection(fraction);
             String[] coords = arg.getString("base").split("\\s+");
@@ -95,8 +96,11 @@ public class AtlantGTA extends JavaPlugin {
                         .salary(post.getInt("salary"))
                         .build()
                 );
+                logger.info(" ---- " + postName + " пост успешно установлен.");
             }
+            logger.info(fraction + " фракция успешно установлена.");
         }
+        logger.info("[Загрузка фракций завершена]");
 
         Bukkit.getPluginManager().registerEvents(connectionListener, this);
         Bukkit.getPluginManager().registerEvents(new PlayerDamageListener(this), this);

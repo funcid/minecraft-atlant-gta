@@ -152,7 +152,7 @@ public class FractionCommand implements CommandExecutor {
                     }
                     IPlayer player = PLUGIN.getOnlinePlayers().get(Bukkit.getPlayer(strings[1]).getUniqueId());
                     try {
-                        if (!PostUtil.getPostByName(strings[2]).getParrent().equals(atlantPlayer.getFraction())) {
+                        if (!PostUtil.getPostByName(strings[2]).getParent().equals(atlantPlayer.getFraction())) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NumberFormatException"));
                             return true;
                         }
