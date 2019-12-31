@@ -7,17 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6583296-ffa3-4df9-a28c-9967ceb5a4b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/atlantgta_main_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/atlantgta_main_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/AtlantGTA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/AtlantGTA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/GetEquipmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/GetEquipmentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/PassCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/PassCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/fraction/FractionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/fraction/FractionCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/Fraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/IPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/IPost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/PostBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/fraction/PostBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,10 +91,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

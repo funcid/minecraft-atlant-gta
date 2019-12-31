@@ -18,7 +18,7 @@ public class Fraction extends FractionBuilder implements IFraction {
 
     @Override
     public String getSubName() {
-        return subName.isEmpty() ? "Ошибка загрузки." : subName ;
+        return subName ;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Fraction extends FractionBuilder implements IFraction {
 
     @Override
     public String getName() {
-        return name.isEmpty() ? "Ошибка загрузки." : name;
+        return name;
     }
 
     @Override

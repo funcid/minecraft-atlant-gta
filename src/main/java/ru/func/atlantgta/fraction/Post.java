@@ -23,12 +23,12 @@ public class Post extends PostBuilder implements IPost {
 
     @Override
     public String getName() {
-        return name.isEmpty() ? "Ошибка загрузки." : name;
+        return name;
     }
 
     @Override
     public String getSubName() {
-        return subName.isEmpty() ? "Ошибка загрузки." : subName;
+        return subName;
     }
 
     @Override
