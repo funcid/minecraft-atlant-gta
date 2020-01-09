@@ -35,21 +35,19 @@ public class TradeCommand implements CommandExecutor {
         if (strings.length == 2) {
             if ("accept".equals(strings[0])) {
                 Player player = Bukkit.getPlayer(strings[1]);
-                if (PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
-                    if (invites.containsKey(((Player) commandSender).getUniqueId())) {
-                        int price = value.get(((Player) commandSender).getUniqueId());
-                        if (PLUGIN.getEconomy().getBalance((Player) commandSender) > price) {
-                            player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("tradeAccepted"));
+                if (invites.containsKey(((Player) commandSender).getUniqueId())) {
+                    int price = value.get(((Player) commandSender).getUniqueId());
+                    if (PLUGIN.getEconomy().getBalance((Player) commandSender) > price) {
+                        player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("tradeAccepted"));
 
-                            PLUGIN.getEconomy().depositPlayer(player, price);
-                            PLUGIN.getEconomy().withdrawPlayer((Player) commandSender, price);
+                        PLUGIN.getEconomy().depositPlayer(player, price);
+                        PLUGIN.getEconomy().withdrawPlayer((Player) commandSender, price);
 
-                            ((Player) commandSender).getInventory().addItem(container.get(player.getUniqueId()));
+                        ((Player) commandSender).getInventory().addItem(container.get(player.getUniqueId()));
 
-                            invites.remove(player.getUniqueId());
-                            container.remove(player.getUniqueId());
-                            value.remove(((Player) commandSender).getUniqueId());
-                        }
+                        invites.remove(player.getUniqueId());
+                        container.remove(player.getUniqueId());
+                        value.remove(((Player) commandSender).getUniqueId());
                     }
                 }
             } else if (PLUGIN.getOnlinePlayers().containsKey(Bukkit.getPlayer(strings[0]).getUniqueId())) {

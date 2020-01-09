@@ -122,7 +122,7 @@ public class ConnectionListener implements Listener {
 
         Scoreboard scoreboard = new Scoreboard();
 
-        ScoreboardObjective objective = scoreboard.registerObjective("§a§lAtlantWorld", IScoreboardCriteria.b);
+        ScoreboardObjective objective = scoreboard.registerObjective(NAME, IScoreboardCriteria.b);
         PacketPlayOutScoreboardObjective createObj = new PacketPlayOutScoreboardObjective(objective, 0);
         PacketPlayOutScoreboardObjective removeObj = new PacketPlayOutScoreboardObjective(objective, 1);
         PacketPlayOutScoreboardDisplayObjective display = new PacketPlayOutScoreboardDisplayObjective(1, objective);
