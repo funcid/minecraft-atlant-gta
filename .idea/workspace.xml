@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6583296-ffa3-4df9-a28c-9967ceb5a4b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/TradeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/command/TradeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/AtlantGTA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/AtlantGTA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/listener/ConnectionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/atlantgta/listener/ConnectionListener.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AtlantGTA [build]">
+  <component name="RunManager" selected="Gradle.AtlantGTA [clean]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
