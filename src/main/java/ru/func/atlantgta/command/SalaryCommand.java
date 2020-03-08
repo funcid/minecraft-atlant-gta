@@ -47,7 +47,7 @@ public class SalaryCommand implements CommandExecutor {
             }
         }
 
-        return true;
+        return false;
     }
 
     private void giveSalary(Player player) {

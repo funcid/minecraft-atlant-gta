@@ -21,8 +21,8 @@ public class FractionChatCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
-        if (!(commandSender instanceof Player)) return true;
-        if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return true;
+        if (!(commandSender instanceof Player)) return false;
+        if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return false;
 
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
 

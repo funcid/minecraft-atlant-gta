@@ -79,6 +79,6 @@ public class HealthCommand implements CommandExecutor {
                 }
             }
         }
-        return true;
+        return false;
     }
 }

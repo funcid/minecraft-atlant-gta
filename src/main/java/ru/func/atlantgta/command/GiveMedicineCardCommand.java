@@ -32,6 +32,6 @@ public class GiveMedicineCardCommand implements CommandExecutor {
             else
                 return false;
         }
-        return true;
+        return false;
     }
 }

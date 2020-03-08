@@ -64,6 +64,6 @@ public class FractionTeleportCommand implements CommandExecutor {
             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("correctBaseChange"));
             PLUGIN.saveConfig();
         }
-        return true;
+        return false;
     }
 }

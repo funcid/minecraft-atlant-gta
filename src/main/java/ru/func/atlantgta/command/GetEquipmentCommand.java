@@ -11,7 +11,7 @@ import ru.func.atlantgta.AtlantGTA;
 import ru.func.atlantgta.IPlayer;
 import ru.func.atlantgta.util.MessageUtil;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 public class GetEquipmentCommand implements CommandExecutor {
 
@@ -25,7 +25,7 @@ public class GetEquipmentCommand implements CommandExecutor {
 
         ItemMeta itemMeta = BATON.getItemMeta();
         itemMeta.setDisplayName(PLUGIN.getConfig().getString("settings.policeStick.name"));
-        itemMeta.setLore(Arrays.asList(PLUGIN.getConfig().getString("settings.policeStick.description")));
+        itemMeta.setLore(Collections.singletonList(PLUGIN.getConfig().getString("settings.policeStick.description")));
         BATON.setItemMeta(itemMeta);
     }
 
@@ -37,7 +37,7 @@ public class GetEquipmentCommand implements CommandExecutor {
         if (atlantPlayer.getPost() == null) {
             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("PostNotFoundException"));
             commandSender.sendMessage("Кто-то с тобой накосячил. Вероятно, название поста не корректно.");
-            return false;
+            return true;
         }
         if (atlantPlayer.getPost().getRoots().contains("getequipCommand")) {
             atlantPlayer.setAmmunition(atlantPlayer.getAmmunition() + PRICE);

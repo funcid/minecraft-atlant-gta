@@ -38,6 +38,6 @@ public class GiveStarsCommand implements CommandExecutor {
                 } catch (Exception ignored) { }
             }
         }
-        return true;
+        return false;
     }
 }

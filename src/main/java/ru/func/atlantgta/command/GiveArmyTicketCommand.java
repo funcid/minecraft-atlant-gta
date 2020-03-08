@@ -29,6 +29,6 @@ public class GiveArmyTicketCommand implements CommandExecutor {
                     PLUGIN.getOnlinePlayers().get(Bukkit.getPlayer(strings[0]).getUniqueId()).setTicket(true);
             else return false;
         }
-        return true;
+        return false;
     }
 }

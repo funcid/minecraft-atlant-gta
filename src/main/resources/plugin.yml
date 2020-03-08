@@ -7,54 +7,80 @@ description: '§cХочу стать девочкой-волшебницей.'
 depend: [Vault, Essentials]
 commands:
   f:
-    usage: '/f <invite/kick/setpost/accept> аргумент'
+    description: 'Введите /f <invite/kick/setpost/accept> аргумент'
+    usage: 'Введите /f <invite/kick/setpost/accept> аргумент'
   fc:
-    usage: '/fc сообщение'
+    description: 'Введите /fc сообщение'
+    usage: 'Введите /fc сообщение'
   base:
-    usage: '/base /*телепортирует на базу вашей фракции*/'
+    description: 'Введите /base /*телепортирует на базу вашей фракции*/'
+    usage: 'Введите /base /*телепортирует на базу вашей фракции*/'
   rob:
-    usage: '/rob <name>'
+    description: 'Введите /rob <ник>'
+    usage: 'Введите /rob <ник>'
   pass:
-    usage: '/pass <name>'
+    description: 'Введите /pass <ник>'
+    usage: 'Введите /pass <ник>'
   resetstars:
-    usage: '/resetstars <name>'
+    description: 'Введите /resetstars <ник>'
+    usage: 'Введите /resetstars <ник>'
   level:
-    usage: '/level'
+    description: 'Введите /level'
+    usage: 'Введите /level'
   levelup:
-    usage: '/levelup <name>'
+    description: 'Введите /levelup <ник>'
+    usage: 'Введите /levelup <ник>'
   givestars:
-    usage: '/givestars <name> <value>'
+    description: 'Введите /givestars <ник> <количество>'
+    usage: 'Введите /givestars <ник> <количество>'
   arrest:
-    usage: '/arrest <name>'
+    description: 'Введите /arrest <ник>'
+    usage: 'Введите /arrest <ник>'
   unarrest:
-    usage: '/unarrest <name>'
+    description: 'Введите /unarrest <ник>'
+    usage: 'Введите /unarrest <ник>'
   prison:
-    usage: '/prison <jail/freedom>'
+    description: 'Введите /prison <jail/freedom>'
+    usage: 'Введите /prison <jail/freedom>'
   leave:
-    usage: '/leave'
+    description: 'Введите /leave'
+    usage: 'Введите /leave'
   getequip:
-    usage: '/getequip'
+    description: 'Введите /getequip'
+    usage: 'Введите /getequip'
   robequip:
-    usage: '/robequip'
+    description: 'Введите /robequip'
+    usage: 'Введите /robequip'
   makegun:
-    usage: '/makegun <name>'
+    description: 'Введите /makegun <ник>'
+    usage: 'Введите /makegun <ник>'
   trade:
-    usage: '/trade <name> <value>'
+    description: 'Введите /trade <ник> <сумма>'
+    usage: 'Введите /trade <ник> <сумма>'
   shtraf:
-    usage: '/shtraf <name> <value>'
+    description: 'Введите /shtraf <ник> <сумма>'
+    usage: 'Введите /shtraf <ник> <сумма>'
   hp:
-    usage: '/hp <name> <value>'
+    description: 'Введите /hp <ник> <значение>'
+    usage: 'Введите /hp <ник> <значение>'
   hidescore:
-    usage: '/hidescore'
+    description: 'Введите /hidescore'
+    usage: 'Введите /hidescore'
   givemedcard:
-    usage: '/givemedcard <name>'
+    description: 'Введите /givemedcard <ник>'
+    usage: 'Введите /givemedcard <ник>'
   givearmyticket:
-    usage: '/givearmyticket <name>'
+    description: 'Введите /givearmyticket <ник>'
+    usage: 'Введите /givearmyticket <ник>'
   reportbug:
-    usage: '/reportbug'
+    description: 'Введите /reportbug'
+    usage: 'Введите /reportbug'
   salary:
-    usage: '/salary'
+    description: 'Введите /salary'
+    usage: 'Введите /salary'
   contract:
-    usage: '/contract <name> <value>'
+    description: 'Введите /contract <ник> <сумма>'
+    usage: 'Введите /contract <ник> <сумма>'
   helpme:
-    usage: '/helpme <question>'
+    description: 'Введите /helpme <question>'
+    usage: 'Введите /helpme <question>'

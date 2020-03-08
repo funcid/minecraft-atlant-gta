@@ -28,8 +28,8 @@ public class FractionCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (!(commandSender instanceof Player)) return true;
-        if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return true;
+        if (!(commandSender instanceof Player)) return false;
+        if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return false;
 
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
 
@@ -46,7 +46,7 @@ public class FractionCommand implements CommandExecutor {
                 break;
             case 2:
                 switch (strings[0]) {
-                    case "invite":
+                    /*case "invite":
 
                         if (!atlantPlayer.getPost().getRoots().contains("fractionInviteCommand")) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoRootsException"));
@@ -98,7 +98,7 @@ public class FractionCommand implements CommandExecutor {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));
                             return true;
                         }
-                        break;
+                        break;*/
                     case "kick":
                         if (!atlantPlayer.getPost().getRoots().contains("fractionKickCommand")) {
                             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoRootsException"));
@@ -164,6 +164,6 @@ public class FractionCommand implements CommandExecutor {
                 }
                 break;
         }
-        return true;
+        return false;
     }
 }

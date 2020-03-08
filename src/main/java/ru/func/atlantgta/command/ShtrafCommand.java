@@ -60,6 +60,6 @@ public class ShtrafCommand implements CommandExecutor {
             } else
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UseCommandException"));
         }
-        return true;
+        return false;
     }
 }

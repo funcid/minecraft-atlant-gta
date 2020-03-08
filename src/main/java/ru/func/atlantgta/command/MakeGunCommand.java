@@ -42,7 +42,6 @@ public class MakeGunCommand implements CommandExecutor {
             } else
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NumberFormatException"));
         }
-
-        return true;
+        return false;
     }
 }

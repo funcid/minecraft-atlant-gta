@@ -36,8 +36,9 @@ public class RobEquipmentCommand implements CommandExecutor {
             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("getEquip")
                     .replace("%VALUE%", PRICE + "")
             );
+            return true;
         } else
             commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UseCommandException"));
-        return true;
+        return false;
     }
 }

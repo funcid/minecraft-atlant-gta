@@ -11,6 +11,7 @@ import ru.func.atlantgta.util.MessageUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Stream;
 
 public class HelpMeCommand implements CommandExecutor {
 
@@ -52,16 +53,17 @@ public class HelpMeCommand implements CommandExecutor {
                 }
             } else {
                 String question = String.join(" ", strings);
-                for (Player p : Bukkit.getOnlinePlayers())
-                    if (PLUGIN.getOnlinePlayers().get(p.getUniqueId()).getPost().getRoots().contains("helpmeCommand"))
-                        p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("helpMe")
-                                .replace("%NAME%", commandSender.getName())
-                                .replace("%QUESTION%", question)
+                Bukkit.getOnlinePlayers().stream()
+                        .filter(p -> PLUGIN.getOnlinePlayers().get(p.getUniqueId()).getPost().getRoots().contains("helpmeCommand"))
+                        .forEach(p -> p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("helpMe")
+                                        .replace("%NAME%", commandSender.getName())
+                                        .replace("%QUESTION%", question)
+                                )
                         );
                 commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("request"));
                 invites.add(((Player) commandSender).getUniqueId());
             }
         }
-        return true;
+        return false;
     }
 }

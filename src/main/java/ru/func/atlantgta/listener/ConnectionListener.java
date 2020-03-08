@@ -72,7 +72,7 @@ public class ConnectionListener implements Listener {
                         rs.lookupValue("level"),
                         rs.lookupValue("age"),
                         FractionUtil.getFractionByName(((String) rs.lookupValue("fraction")).split(":")[0]),
-                        PostUtil.getPostByName(((String) rs.lookupValue("post")).split(":")[1]),
+                        PostUtil.getPostByName(((String) rs.lookupValue("fraction")).split(":")[1]),
                         0,
                         rs.lookupValue("ammo"),
                         ((int) rs.lookupValue("ticket")) == 1,

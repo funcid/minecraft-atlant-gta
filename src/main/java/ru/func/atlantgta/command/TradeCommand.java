@@ -94,6 +94,6 @@ public class TradeCommand implements CommandExecutor {
                 }
             }
         }
-        return true;
+        return false;
     }
 }

@@ -41,8 +41,10 @@ public class ContractCommand implements CommandExecutor {
                         commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("MoreMoneyException"));
                         return true;
                     }
-                    if (ContractUtil.getContracts().containsKey(entity.getUniqueId()))
+                    if (ContractUtil.getContracts().containsKey(entity.getUniqueId())) {
+                        commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("FractionNotFoundException"));
                         return true;
+                    }
                     if (PLUGIN.getEconomy().getBalance((Player) commandSender) < price) {
                         commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoMoneyException"));
                         return true;
@@ -59,6 +61,6 @@ public class ContractCommand implements CommandExecutor {
                 }
             }
         }
-        return true;
+        return false;
     }
 }

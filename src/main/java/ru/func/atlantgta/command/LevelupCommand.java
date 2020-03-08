@@ -30,8 +30,9 @@ public class LevelupCommand implements CommandExecutor {
                 player.setAge(player.getAge() + 1);
                 Bukkit.getPlayer(strings[0]).sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("levelUp"));
                 commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("levelUp"));
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }

@@ -23,8 +23,9 @@ public class HideScoreboardCommand implements CommandExecutor {
         if (connectionListener.getHideScoreboard().contains(((Player) commandSender).getUniqueId())) {
             connectionListener.getHideScoreboard().remove(((Player) commandSender).getUniqueId());
             connectionListener.enableScoreboard((Player) commandSender);
+            return true;
         } else
             connectionListener.getHideScoreboard().add(((Player) commandSender).getUniqueId());
-        return true;
+        return false;
     }
 }

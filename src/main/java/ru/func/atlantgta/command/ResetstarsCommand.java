@@ -32,6 +32,6 @@ public class ResetstarsCommand implements CommandExecutor {
                     commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("resetStars"));
             }
         }
-        return true;
+        return false;
     }
 }

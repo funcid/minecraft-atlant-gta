@@ -63,6 +63,6 @@ public class RobCommand implements CommandExecutor {
         );
         IPlayer rober = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
         if (rober.getStars() < 5) rober.setStars(rober.getStars() + 1);
-        return true;
+        return false;
     }
 }

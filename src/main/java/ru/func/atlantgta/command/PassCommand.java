@@ -65,7 +65,7 @@ public class PassCommand implements CommandExecutor {
                 }
             }
         }
-        return true;
+        return false;
     }
 
     private void showPassword(Player sender, Player toOpen) {
