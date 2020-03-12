@@ -28,14 +28,14 @@ public class GiveAbilityCommand implements CommandExecutor {
                     case "военный_билет":
                         if(sender.getPost().getRoots().contains("givearmyticketCommand") || commandSender.isOp()) {
                             adressat.setTicket(true);
-                            player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("isTicket"));
+                            player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("getTicket"));
                             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("givenTicket").replace("%NAME%", player.getName()));
                         }
                         break;
                     case "медицинская_карта":
                         if(sender.getPost().getRoots().contains("givemedcardCommand") || commandSender.isOp()) {
                             adressat.setCard(true);
-                            player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("isCard"));
+                            player.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("getCard"));
                             commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("givenCard").replace("%NAME%", player.getName()));
                         }
                         break;
