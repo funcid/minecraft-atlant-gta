@@ -1,5 +1,6 @@
 package ru.func.atlantgta.command;
 
+import lombok.AllArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,18 +9,14 @@ import org.bukkit.entity.Player;
 import ru.func.atlantgta.AtlantGTA;
 import ru.func.atlantgta.util.MessageUtil;
 
+@AllArgsConstructor
 public class GiveStarsCommand implements CommandExecutor {
-
     private final AtlantGTA PLUGIN;
-
-    public GiveStarsCommand(AtlantGTA plugin) {
-        PLUGIN = plugin;
-    }
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player) {
-            if (!commandSender.isOp() || !PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId()) || !PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getPost().getRoots().contains("givestarsCommand")) {
+            if (!commandSender.isOp() && (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId()) || !PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getPost().getRoots().contains("givestarsCommand"))) {
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UseCommandException"));
                 return true;
             }

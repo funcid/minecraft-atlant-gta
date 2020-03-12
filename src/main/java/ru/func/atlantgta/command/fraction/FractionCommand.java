@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import ru.func.atlantgta.AtlantGTA;
 import ru.func.atlantgta.IPlayer;
-import ru.func.atlantgta.fraction.Fraction;
 import ru.func.atlantgta.fraction.FractionUtil;
 import ru.func.atlantgta.fraction.PostUtil;
 import ru.func.atlantgta.util.MessageUtil;
@@ -40,7 +39,7 @@ public class FractionCommand implements CommandExecutor {
                         atlantPlayer.setFraction(FractionUtil.getNoneFraction());
                         atlantPlayer.setPost(PostUtil.getNonePost());
                         commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("leaveFraction"));
-                        break;
+                        return true;
                     //Другие аргументы при одном аргументе
                 }
                 break;
@@ -79,11 +78,11 @@ public class FractionCommand implements CommandExecutor {
                         if (invites.containsKey(sender.getUniqueId()) && invites.get(sender.getUniqueId()).equals(((Player) commandSender).getUniqueId())) {
                             if (atlantPlayer.getFraction().getName().equalsIgnoreCase("NONE")) {
                                 IPlayer atlantSender = PLUGIN.getOnlinePlayers().get(sender.getUniqueId());
-                                if (atlantSender.getFraction().getName().equals("ARMY") && !atlantPlayer.hasCard()) {
+                                if (atlantSender.getFraction().getName().equals("ARMY") && !atlantPlayer.isCard()) {
                                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoMedicineCardFound"));
                                     return true;
                                 }
-                                if (atlantSender.getFraction().getName().equals("POLICE") && !atlantPlayer.hasTicket()) {
+                                if (atlantSender.getFraction().getName().equals("POLICE") && !atlantPlayer.isTicket()) {
                                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoArmyTicketFound"));
                                     return true;
                                 }
@@ -116,30 +115,35 @@ public class FractionCommand implements CommandExecutor {
                         playerToKick.setFraction(FractionUtil.getNoneFraction());
                         playerToKick.setPost(PostUtil.getNonePost());
                         Bukkit.getPlayer(strings[1]).sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("wasKicked"));
-                        break;
+                        return true;
                     case "join":
-                        Fraction fraction = FractionUtil.getFractionByName(strings[1]);
-                        if (fraction != null) {
-                            if (atlantPlayer.getFraction().getName().equalsIgnoreCase("NONE")) {
-                                if (strings[1].equals("ARMY") && !atlantPlayer.hasCard()) {
-                                    commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoMedicineCardFound"));
-                                    return true;
-                                }
-                                if (strings[1].equals("POLICE") && !atlantPlayer.hasTicket()) {
-                                    commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoArmyTicketFound"));
-                                    return true;
-                                }
-                                atlantPlayer.setFraction(fraction);
-                                atlantPlayer.setPost(PostUtil.getPostByName("F" + fraction.getName()));
-                                commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("joinFraction"));
-                            } else {
-                                commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));
-                                return true;
-                            }
-                        }
-                        break;
+                        if(PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getLevel() >= 2) {
+                            FractionUtil.getFractionBySubName(strings[1]).ifPresent(fraction -> {
+                                boolean cancelled = false;
+                                if (atlantPlayer.getFraction().getName().equalsIgnoreCase("NONE")) {
+                                    if (fraction.getName().equalsIgnoreCase("ARMY") && !atlantPlayer.isCard()) {
+                                        commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoMedicineCardFound"));
+                                        cancelled = true;
+                                    }
+                                    if (!cancelled) {
+                                        if (fraction.getName().equalsIgnoreCase("POLICE") && !atlantPlayer.isTicket()) {
+                                            commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("NoArmyTicketFound"));
+                                            cancelled = true;
+                                        }
+                                        if (!cancelled) {
+                                            atlantPlayer.setFraction(fraction);
+                                            atlantPlayer.setPost(PostUtil.getPostByName("F" + fraction.getName()));
+                                            commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("joinFraction"));
+                                        }
+                                    }
+                                } else
+                                    commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));
+                            });
+                        } else
+                            commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("LowLevelJoiningFraction"));
+                        return true;
                 }
-                break;
+                return true;
             case 3:
                 if (strings[0].equals("setpost")) {
                     if (!atlantPlayer.getPost().getRoots().contains("fractionSetpostCommand")) {

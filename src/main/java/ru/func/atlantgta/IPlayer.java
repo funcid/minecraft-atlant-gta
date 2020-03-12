@@ -29,9 +29,9 @@ public interface IPlayer {
 
     void setAmmunition(int ammunition);
 
-    boolean hasCard();
+    boolean isCard();
 
-    boolean hasTicket();
+    boolean isTicket();
 
     void setCard(boolean card);
 

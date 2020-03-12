@@ -67,7 +67,7 @@ public class AtlantGTA extends JavaPlugin {
             Bukkit.getPluginManager().disablePlugin(this);
         // Подключение к базе данных
         getLogger().info("[!] Connecting to DataBase.");
-        BASE.executeUpdate("CREATE TABLE IF NOT EXISTS `AtlantPlayers` (uuid varchar(50), name varchar(50), level INT, age INT, ammo INT, fraction varchar(150), ticket INT, card INT, PRIMARY KEY(uuid));");
+        BASE.executeUpdate("CREATE TABLE IF NOT EXISTS `AtlantPlayers` (uuid varchar(50), name varchar(50), level INT, age INT, ammo INT, fraction varchar(150), ticket INT, card INT, star INT, PRIMARY KEY(uuid));");
         getLogger().info("[!] Connected to DataBase.");
         // Создание фракций
         getLogger().info("[Загрузка фракций и постов начата]");
@@ -110,6 +110,7 @@ public class AtlantGTA extends JavaPlugin {
         Bukkit.getOnlinePlayers().forEach(connectionListener::loadStats);
 
         // Регистрация команд
+        Bukkit.getPluginCommand("giveabil").setExecutor(new GiveAbilityCommand(this));
         Bukkit.getPluginCommand("f").setExecutor(new FractionCommand(this));
         Bukkit.getPluginCommand("fc").setExecutor(new FractionChatCommand(this));
         Bukkit.getPluginCommand("base").setExecutor(new FractionTeleportCommand(this));
@@ -129,8 +130,6 @@ public class AtlantGTA extends JavaPlugin {
         Bukkit.getPluginCommand("trade").setExecutor(new TradeCommand(this));
         Bukkit.getPluginCommand("shtraf").setExecutor(new ShtrafCommand(this));
         Bukkit.getPluginCommand("hp").setExecutor(new HealthCommand(this));
-        Bukkit.getPluginCommand("givemedcard").setExecutor(new GiveMedicineCardCommand(this));
-        Bukkit.getPluginCommand("givearmyticket").setExecutor(new GiveArmyTicketCommand(this));
         Bukkit.getPluginCommand("salary").setExecutor(new SalaryCommand(this));
         Bukkit.getPluginCommand("contract").setExecutor(new ContractCommand(this));
         Bukkit.getPluginCommand("helpme").setExecutor(new HelpMeCommand(this));
@@ -141,7 +140,6 @@ public class AtlantGTA extends JavaPlugin {
     @Override
     public void onDisable() {
         connectionListener.saveAll();
-        // Bukkit.getOnlinePlayers().forEach(player -> connectionListener.saveStats(player, true));
     }
 
     private void registerConfig() {

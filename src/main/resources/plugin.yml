@@ -1,14 +1,14 @@
 main: ru.func.atlantgta.AtlantGTA
 name: AtlantGTA
 version: 1.0
-author: func
+author: [func, reidj]
 website: http://funcid.ru
 description: '§cХочу стать девочкой-волшебницей.'
 depend: [Vault, Essentials]
 commands:
   f:
-    description: 'Введите /f <invite/kick/setpost/accept> аргумент'
-    usage: 'Введите /f <invite/kick/setpost/accept> аргумент'
+    description: 'Введите /f <kick> ник | Введите /f <setpost> ник пост | Введите /f <join> фракция | Введите /f <leave>'
+    usage: 'Введите /f <kick> ник | Введите /f <setpost> ник пост | Введите /f <join> фракция | Введите /f <leave>'
   fc:
     description: 'Введите /fc сообщение'
     usage: 'Введите /fc сообщение'
@@ -66,12 +66,9 @@ commands:
   hidescore:
     description: 'Введите /hidescore'
     usage: 'Введите /hidescore'
-  givemedcard:
-    description: 'Введите /givemedcard <ник>'
-    usage: 'Введите /givemedcard <ник>'
-  givearmyticket:
-    description: 'Введите /givearmyticket <ник>'
-    usage: 'Введите /givearmyticket <ник>'
+  giveabil:
+    description: 'Введите /giveabil <ник> <медиценская_карта/военный_билет>'
+    usage: 'Введите /giveabil <ник> <медиценская_карта/военный_билет>'
   reportbug:
     description: 'Введите /reportbug'
     usage: 'Введите /reportbug'

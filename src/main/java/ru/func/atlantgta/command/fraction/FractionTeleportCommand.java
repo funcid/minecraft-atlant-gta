@@ -8,9 +8,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import ru.func.atlantgta.AtlantGTA;
 import ru.func.atlantgta.IPlayer;
-import ru.func.atlantgta.fraction.Fraction;
 import ru.func.atlantgta.fraction.FractionUtil;
 import ru.func.atlantgta.util.MessageUtil;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 public class FractionTeleportCommand implements CommandExecutor {
 
@@ -49,20 +50,21 @@ public class FractionTeleportCommand implements CommandExecutor {
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("OplessException"));
                 return true;
             }
-            Fraction fraction = FractionUtil.getFractionByName(strings[0]);
-            if (fraction == null) {
+            AtomicReference<Boolean> exist = new AtomicReference<>(false);
+            FractionUtil.getFractionByName(strings[0]).ifPresent(fraction -> {
+                exist.set(true);
+                Location newbaseLocation = ((Player) commandSender).getLocation();
+                fraction.setBaseLocation(newbaseLocation);
+                PLUGIN.getConfig().set("fractions." + fraction.getName() + ".base",
+                        newbaseLocation.getX() + " " +
+                                newbaseLocation.getY() + " " +
+                                newbaseLocation.getZ()
+                );
+                commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("correctBaseChange"));
+                PLUGIN.saveConfig();
+            });
+            if (!exist.get())
                 commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("FractionNotFoundException"));
-                return true;
-            }
-            Location newbaseLocation = ((Player) commandSender).getLocation();
-            fraction.setBaseLocation(newbaseLocation);
-            PLUGIN.getConfig().set("fractions." + fraction.getName() + ".base",
-                    newbaseLocation.getX() + " " +
-                            newbaseLocation.getY() + " " +
-                            newbaseLocation.getZ()
-            );
-            commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("correctBaseChange"));
-            PLUGIN.saveConfig();
         }
         return false;
     }

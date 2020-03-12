@@ -2,6 +2,7 @@ package ru.func.atlantgta.fraction;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class FractionUtil {
 
@@ -13,12 +14,18 @@ public class FractionUtil {
             .baseLocation(null)
             .build();
 
-    public static Fraction getFractionByName(String name) {
-        for (Fraction fraction : fractions)
-            if (fraction.getName().equals(name))
-                return fraction;
-        return null;
+    public static Optional<Fraction> getFractionByName(String name) {
+        return fractions.stream()
+                .filter(f -> f.getName().equalsIgnoreCase(name))
+                .findAny();
     }
+
+    public static Optional<Fraction> getFractionBySubName(String subName) {
+        return fractions.stream()
+                .filter(f -> f.getSubName().equalsIgnoreCase(subName))
+                .findAny();
+    }
+
 
     public static List<Fraction> getFractions() {
         return fractions;

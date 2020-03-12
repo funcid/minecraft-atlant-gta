@@ -71,9 +71,9 @@ public class ConnectionListener implements Listener {
                 player = new AtlantPlayer(
                         rs.lookupValue("level"),
                         rs.lookupValue("age"),
-                        FractionUtil.getFractionByName(((String) rs.lookupValue("fraction")).split(":")[0]),
+                        FractionUtil.getFractionByName(((String) rs.lookupValue("fraction")).split(":")[0]).get(),
                         PostUtil.getPostByName(((String) rs.lookupValue("fraction")).split(":")[1]),
-                        0,
+                        rs.lookupValue("star"),
                         rs.lookupValue("ammo"),
                         ((int) rs.lookupValue("ticket")) == 1,
                         ((int) rs.lookupValue("card")) == 1
@@ -105,7 +105,7 @@ public class ConnectionListener implements Listener {
 
     private String getValues(Player p) {
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(p.getUniqueId());
-        return String.format("('%s', '%s', %s, %s, %s, '%s', %s, %s)", p.getUniqueId().toString(), p.getName(), atlantPlayer.getLevel(), atlantPlayer.getAge(), atlantPlayer.getAmmunition(), atlantPlayer.getFraction().getName() + ":" + atlantPlayer.getPost().getName(), (atlantPlayer.hasTicket() ? 1 : 0), (atlantPlayer.hasCard() ? 1 : 0));
+        return String.format("('%s', '%s', %s, %s, %s, '%s', %s, %s, %s)", p.getUniqueId().toString(), p.getName(), atlantPlayer.getLevel(), atlantPlayer.getAge(), atlantPlayer.getAmmunition(), atlantPlayer.getFraction().getName() + ":" + atlantPlayer.getPost().getName(), (atlantPlayer.isTicket() ? 1 : 0), (atlantPlayer.isCard() ? 1 : 0), atlantPlayer.getStars());
     }
 
     public void enableScoreboard(Player player) {
