@@ -1,6 +1,5 @@
 package ru.func.atlantgta.command.fraction;
 
-import com.google.common.collect.Maps;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,9 +11,6 @@ import ru.func.atlantgta.fraction.FractionUtil;
 import ru.func.atlantgta.fraction.PostUtil;
 import ru.func.atlantgta.util.MessageUtil;
 
-import java.util.Map;
-import java.util.UUID;
-
 public class FractionCommand implements CommandExecutor {
 
     private final AtlantGTA PLUGIN;
@@ -23,7 +19,7 @@ public class FractionCommand implements CommandExecutor {
         PLUGIN = plugin;
     }
 
-    private Map<UUID, UUID> invites = Maps.newHashMap();
+    //private Map<UUID, UUID> invites = Maps.newHashMap();
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
@@ -36,9 +32,12 @@ public class FractionCommand implements CommandExecutor {
             case 1:
                 switch (strings[0]) {
                     case "leave":
-                        atlantPlayer.setFraction(FractionUtil.getNoneFraction());
-                        atlantPlayer.setPost(PostUtil.getNonePost());
-                        commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("leaveFraction"));
+                        if (!atlantPlayer.getFraction().equals(FractionUtil.getNoneFraction())) {
+                            atlantPlayer.setFraction(FractionUtil.getNoneFraction());
+                            atlantPlayer.setPost(PostUtil.getNonePost());
+                            commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("leaveFraction"));
+                        } else
+                            commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("FractionNotFoundException"));
                         return true;
                     //Другие аргументы при одном аргументе
                 }

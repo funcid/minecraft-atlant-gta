@@ -41,7 +41,7 @@ public class ArrestCommand implements CommandExecutor {
 
         if (strings.length == 1) {
             Player player = Bukkit.getPlayer(strings[0]);
-            if (PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
+            if (player != null && PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
                 IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(player.getUniqueId());
                 IPlayer user = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
                 if (!user.getPost().getName().equals("NONE")) {
@@ -66,7 +66,8 @@ public class ArrestCommand implements CommandExecutor {
                         commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UseCommandException"));
                 } else
                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("MayBePolicemanException"));
-            }
+            } else
+                commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UnrealPlayerException"));
         }
         return true;
     }

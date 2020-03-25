@@ -70,7 +70,7 @@ public class AtlantGTA extends JavaPlugin {
         BASE.executeUpdate("CREATE TABLE IF NOT EXISTS `AtlantPlayers` (uuid varchar(50), name varchar(50), level INT, age INT, ammo INT, fraction varchar(150), ticket INT, card INT, star INT, PRIMARY KEY(uuid));");
         getLogger().info("[!] Connected to DataBase.");
         // Создание фракций
-        getLogger().info("[Загрузка фракций и постов начата]");
+        getLogger().info("[Подключение к базе данных завершено] УСПЕШНО");
         for (String fraction : fractionsConfigurationSection.getKeys(false)) {
             ConfigurationSection arg = fractionsConfigurationSection.getConfigurationSection(fraction);
             String[] coords = arg.getString("base").split("\\s+");
@@ -100,14 +100,18 @@ public class AtlantGTA extends JavaPlugin {
             }
             getLogger().info(fraction + " фракция успешно установлена.");
         }
-        getLogger().info("[Загрузка фракций завершена]");
+        getLogger().info("[Загрузка фракций завершена] УСПЕШНО");
 
         Bukkit.getPluginManager().registerEvents(connectionListener, this);
         Bukkit.getPluginManager().registerEvents(new PlayerDamageListener(this), this);
         Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(this), this);
         Bukkit.getPluginManager().registerEvents(new MenuHandler(), this);
 
+        getLogger().info("[Регистрация обработчиов событий завершена] УСПЕШНО");
+
         Bukkit.getOnlinePlayers().forEach(connectionListener::loadStats);
+
+        getLogger().info("[Загрузка профилей завершена] УСПЕШНО");
 
         // Регистрация команд
         Bukkit.getPluginCommand("giveabil").setExecutor(new GiveAbilityCommand(this));
@@ -135,6 +139,8 @@ public class AtlantGTA extends JavaPlugin {
         Bukkit.getPluginCommand("helpme").setExecutor(new HelpMeCommand(this));
         Bukkit.getPluginCommand("hidescore").setExecutor(new HideScoreboardCommand(this));
         Bukkit.getPluginCommand("reportbug").setExecutor(new ReportBugCommand());
+
+        getLogger().info("[Регистрация команд завершена] УСПЕШНО");
     }
 
     @Override

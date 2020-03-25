@@ -53,18 +53,25 @@ public class ConnectionListener implements Listener {
 
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e) {
+        e.setQuitMessage(null);
         saveStats(e.getPlayer());
     }
 
     public void loadStats(Player p) {
-
         ConfigurationSection standardStatsConfigurationSection = PLUGIN.getConfig().getConfigurationSection("standardStats");
-        PLUGIN.getDatabase().executeQuery("SELECT * FROM `AtlantPlayers` WHERE uuid = '" + p.getUniqueId().toString() + "';", (result) -> {
+        PLUGIN.getDatabase().executeQuery("SELECT * FROM `AtlantPlayers` WHERE uuid = '" + p.getUniqueId().toString() + "';", result -> {
             IPlayer player;
             if (result.isEmpty()) {
-                player = new AtlantPlayer(standardStatsConfigurationSection.getInt("level"), standardStatsConfigurationSection.getInt("age"),
-                        FractionUtil.getNoneFraction(), PostUtil.getNonePost(), 0, standardStatsConfigurationSection.getInt("ammo"),
-                        false, false);
+                player = new AtlantPlayer(
+                        standardStatsConfigurationSection.getInt("level"),
+                        standardStatsConfigurationSection.getInt("age"),
+                        FractionUtil.getNoneFraction(),
+                        PostUtil.getNonePost(),
+                        0,
+                        standardStatsConfigurationSection.getInt("ammo"),
+                        false,
+                        false
+                );
                 p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("newAccount"));
             } else {
                 QueryResult.SQLSection rs = result.all().stream().findFirst().get();
@@ -80,10 +87,9 @@ public class ConnectionListener implements Listener {
                 );
             }
             PLUGIN.getOnlinePlayers().put(p.getUniqueId(), player);
-            if (player.getPost().getRoots().contains("doubleHealth")) {
-                p.setMaxHealth(40);
-            }
+            p.setMaxHealth(player.getPost().getRoots().contains("doubleHealth") ? 40 : 20);
             enableScoreboard(p);
+            PLUGIN.getLogger().info(p.getDisplayName() + " авторизация. УСПЕШНО");
         });
     }
 
@@ -99,13 +105,24 @@ public class ConnectionListener implements Listener {
     private void saveStats(Player p) {
         if (PLUGIN.getOnlinePlayers().containsKey(p.getUniqueId())) {
             PLUGIN.getDatabase().executeUpdate(String.format("REPLACE INTO `AtlantPlayers` VALUES %s;", getValues(p)));
+            PLUGIN.getLogger().info(p.getDisplayName() + " сохранение. УСПЕШНО");
             PLUGIN.getOnlinePlayers().remove(p.getUniqueId());
         }
     }
 
     private String getValues(Player p) {
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(p.getUniqueId());
-        return String.format("('%s', '%s', %s, %s, %s, '%s', %s, %s, %s)", p.getUniqueId().toString(), p.getName(), atlantPlayer.getLevel(), atlantPlayer.getAge(), atlantPlayer.getAmmunition(), atlantPlayer.getFraction().getName() + ":" + atlantPlayer.getPost().getName(), (atlantPlayer.isTicket() ? 1 : 0), (atlantPlayer.isCard() ? 1 : 0), atlantPlayer.getStars());
+        return String.format("('%s', '%s', %s, %s, %s, '%s', %s, %s, %s)",
+                p.getUniqueId().toString(),
+                p.getName(),
+                atlantPlayer.getLevel(),
+                atlantPlayer.getAge(),
+                atlantPlayer.getAmmunition(),
+                atlantPlayer.getFraction().getName() + ":" + atlantPlayer.getPost().getName(),
+                (atlantPlayer.isTicket() ? 1 : 0),
+                (atlantPlayer.isCard() ? 1 : 0),
+                atlantPlayer.getStars()
+        );
     }
 
     public void enableScoreboard(Player player) {

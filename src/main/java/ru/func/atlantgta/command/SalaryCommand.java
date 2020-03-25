@@ -30,23 +30,23 @@ public class SalaryCommand implements CommandExecutor {
         if (!(commandSender instanceof Player)) return false;
         if (!PLUGIN.getOnlinePlayers().containsKey(((Player) commandSender).getUniqueId())) return false;
 
-
         IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
 
         if (atlantPlayer.getPost().getSalary() != 0) {
             if (salaryDelays.containsKey(((Player) commandSender).getUniqueId())) {
                 int gamePlayed = ((Player) commandSender).getStatistic(Statistic.PLAY_ONE_TICK) / 1200;
-                if (gamePlayed > salaryDelays.get(((Player) commandSender).getUniqueId()))
+                if (gamePlayed > salaryDelays.get(((Player) commandSender).getUniqueId())) {
                     giveSalary((Player) commandSender);
-                else
+                    return true;
+                } else
                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("WaitDelayException")
                             .replace("%TIME%", (salaryDelays.get(((Player) commandSender).getUniqueId()) - gamePlayed) + "")
                     );
             } else {
                 giveSalary((Player) commandSender);
+                return true;
             }
         }
-
         return false;
     }
 
