@@ -153,7 +153,7 @@ message:
     RobException: 'Что бы обворовать человека вы должны состоять во фракции бандитов.'
     MayBePolicemanException: 'Вы должны быть полицейским что бы использовать данную команду.'
     PostNotFoundException: 'Кто-то с тобой накосячил. Вероятно, название поста не корректно.'
-    LowLevelJoiningFraction: 'Во фракцию можно вступить со 2 уровня!'
+    LowLevelJoiningFraction: 'Во фракцию можно вступить со %LEVEL% уровня!'
 #Настройка фракций
 fractions:
   NONE:

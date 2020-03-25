@@ -30,7 +30,7 @@ public class ContractCommand implements CommandExecutor {
             IPlayer atlantPlayer = PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId());
             if (atlantPlayer.getPost().getRoots().contains("contractCommand")) {
                 Player entity = Bukkit.getPlayer(strings[0]);
-                if (PLUGIN.getOnlinePlayers().containsKey(entity.getUniqueId())) {
+                if (entity != null && PLUGIN.getOnlinePlayers().containsKey(entity.getUniqueId())) {
                     int price;
                     try {
                         price = Integer.parseInt(strings[1]);
@@ -58,6 +58,7 @@ public class ContractCommand implements CommandExecutor {
                                     .replace("%NAME%", entity.getName())
                                     .replace("%MONEY%", price + "")
                             );
+                    return true;
                 }
             }
         }

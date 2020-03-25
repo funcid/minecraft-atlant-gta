@@ -116,8 +116,8 @@ public class FractionCommand implements CommandExecutor {
                         Bukkit.getPlayer(strings[1]).sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("wasKicked"));
                         return true;
                     case "join":
-                        if(PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getLevel() >= 2) {
-                            FractionUtil.getFractionBySubName(strings[1]).ifPresent(fraction -> {
+                        FractionUtil.getFractionBySubName(strings[1]).ifPresent(fraction -> {
+                            if (PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getLevel() >= fraction.getMinLevel()) {
                                 boolean cancelled = false;
                                 if (atlantPlayer.getFraction().getName().equalsIgnoreCase("NONE")) {
                                     if (fraction.getName().equalsIgnoreCase("ARMY") && !atlantPlayer.isCard()) {
@@ -137,12 +137,13 @@ public class FractionCommand implements CommandExecutor {
                                     }
                                 } else
                                     commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("JustInFractionException"));
-                            });
-                        } else
-                            commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("LowLevelJoiningFraction"));
+                            } else
+                                commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("LowLevelJoiningFraction")
+                                        .replace("%LEVEL%", fraction.getMinLevel() + "")
+                                );
+                        });
                         return true;
                 }
-                return true;
             case 3:
                 if (strings[0].equals("setpost")) {
                     if (!atlantPlayer.getPost().getRoots().contains("fractionSetpostCommand")) {

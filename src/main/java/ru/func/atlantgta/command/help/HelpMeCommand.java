@@ -11,7 +11,6 @@ import ru.func.atlantgta.util.MessageUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Stream;
 
 public class HelpMeCommand implements CommandExecutor {
 
@@ -32,7 +31,7 @@ public class HelpMeCommand implements CommandExecutor {
 
         if (strings.length >= 2) {
             Player player = Bukkit.getPlayer(strings[0]);
-            if (PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
+            if (player != null && PLUGIN.getOnlinePlayers().containsKey(player.getUniqueId())) {
                 if (invites.contains(player.getUniqueId())) {
                     if (PLUGIN.getOnlinePlayers().get(((Player) commandSender).getUniqueId()).getPost().getRoots().contains("helpmeCommand")) {
                         StringBuilder stringBuilder = new StringBuilder();
@@ -49,20 +48,23 @@ public class HelpMeCommand implements CommandExecutor {
                         );
                         PLUGIN.getEconomy().depositPlayer((Player) commandSender, PRICE);
                         invites.remove(player.getUniqueId());
+                        return true;
                     }
+                } else {
+                    String question = String.join(" ", strings);
+                    Bukkit.getOnlinePlayers().stream()
+                            .filter(p -> PLUGIN.getOnlinePlayers().get(p.getUniqueId()).getPost().getRoots().contains("helpmeCommand"))
+                            .forEach(p -> p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("helpMe")
+                                            .replace("%NAME%", commandSender.getName())
+                                            .replace("%QUESTION%", question)
+                                    )
+                            );
+                    commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("request"));
+                    invites.add(((Player) commandSender).getUniqueId());
+                    return true;
                 }
-            } else {
-                String question = String.join(" ", strings);
-                Bukkit.getOnlinePlayers().stream()
-                        .filter(p -> PLUGIN.getOnlinePlayers().get(p.getUniqueId()).getPost().getRoots().contains("helpmeCommand"))
-                        .forEach(p -> p.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("helpMe")
-                                        .replace("%NAME%", commandSender.getName())
-                                        .replace("%QUESTION%", question)
-                                )
-                        );
-                commandSender.sendMessage(MessageUtil.getINFO() + MessageUtil.getMessages().getString("request"));
-                invites.add(((Player) commandSender).getUniqueId());
-            }
+            } else
+                commandSender.sendMessage(MessageUtil.getERROR() + MessageUtil.getErrors().getString("UnrealPlayerException"));
         }
         return false;
     }
